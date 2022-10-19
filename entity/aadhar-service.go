@@ -7,4 +7,8 @@ type Aadhar struct {
 	Aadharnum int `json:"aadharnum"`
 
 	Status int `json:"status"`
+	Reason string `json:"reason"`
+	created_timestamp:
+	active_timestamp: 
+	modified_timestamp
 }
