@@ -12,7 +12,7 @@ import (
 
 func main() {
 	initDB()
-	log.Println("Starting the HTTP server on port 8090")
+	log.Println("Starting the HTTP server on port 8095")
 
 	router := mux.NewRouter().StrictSlash(true)
 	initaliseHandlers(router)
@@ -30,10 +30,10 @@ func initaliseHandlers(router *mux.Router) {
 func initDB() {
 	config :=
 		database.Config{
-			ServerName: "localhost:3305",
-			User:       "root1",
+			ServerName: "127.0.0.1:3306",
+			User:       "root",
 			Password:   "password",
-			DB:         "go-aadhar",
+			DB:         "aadharcard",
 		}
 
 	connectionString := database.GetConnectionString(config)

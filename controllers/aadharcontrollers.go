@@ -13,11 +13,11 @@ import (
 
 // GetAllAadhar get all aadhar data
 func GetAllAadhar(w http.ResponseWriter, r *http.Request) {
-	var aadhars []entity.Aadhar
-	database.Connector.Find(&aadhars)
+	var aadhar []entity.Aadhar
+	database.Connector.Find(&aadhar)
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
-	json.NewEncoder(w).Encode(aadhars)
+	json.NewEncoder(w).Encode(aadhar)
 }
 
 // GetAadharByID returns person with specific ID
