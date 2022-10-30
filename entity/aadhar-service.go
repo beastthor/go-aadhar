@@ -2,7 +2,7 @@ package entity
 
 // aadhar object for REST(CRUD)
 type Aadhar struct {
-	demographics_id int `json:"id"`
+	Id int `json:"id"`
 
 	Aadharnum int `json:"aadharnum"`
 
